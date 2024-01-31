@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:siskamling/login.dart';
 import 'package:siskamling/splashscreen.dart';
 
 void main() {
@@ -12,11 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(),
-      initialRoute: '/splashscreen',
+      initialRoute: '/login',
       routes: {
         '/splashscreen': (context) => const SplashScreen (),
+         '/login': (context) => const Login (),
       },
     );
   }
