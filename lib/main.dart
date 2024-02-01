@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:siskamling/login.dart';
+import 'package:siskamling/admin/login.dart';
 import 'package:siskamling/splashscreen.dart';
+import 'package:siskamling/admin/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(),
-      initialRoute: '/login',
+      initialRoute: '/dashboard',
       routes: {
         '/splashscreen': (context) => const SplashScreen (),
-         '/login': (context) => const Login (),
+        '/login': (context) => const Login (),
+        '/dashboard':(context) => Dashboard(),
       },
     );
   }
