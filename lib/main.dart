@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:siskamling/admin/data_warga.dart';
+import 'package:siskamling/admin/arsip_laporan.dart';
 import 'package:siskamling/admin/login.dart';
 import 'package:siskamling/splashscreen.dart';
 import 'package:siskamling/admin/dashboard.dart';
@@ -15,13 +17,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Siskamling',
       theme: ThemeData(),
-      initialRoute: '/dashboard',
+      initialRoute: '/arsip_laporan',
       routes: {
         '/splashscreen': (context) => const SplashScreen (),
         '/login': (context) => const Login (),
-        '/dashboard':(context) => Dashboard(),
+        '/dashboard':(context) => const Dashboard(),
+        '/data_warga':(context) => const DataWarga(),
+        '/arsip_laporan':(context) => const ArsipLaporan(),
       },
     );
   }

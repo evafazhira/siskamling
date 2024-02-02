@@ -12,85 +12,111 @@ class Dashboard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
-                height: 125,
+             const SizedBox(
+             height: 125,
+              ),
+             
+               Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Container(
+                  width: 250,
+                  height: 90,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 251, 129, 16),
+                    borderRadius: BorderRadius.circular(25.0),
+                    border: Border.all(
+                      color: const Color.fromARGB(255, 251, 129, 16),
+                      width: 2.0,
+                      
+                    ),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 16.0), // Adjust left padding
+                        child: Text(
+                          "Data Warga",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 16.0), // Adjust right padding
+                        child: Image(
+                          image: AssetImage('assets/images/maling.jpeg'),
+                          width: 40, // Adjust the width as needed
+                          height: 40, // Adjust the height as needed
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+
+              const SizedBox(
+                height: 15,
               ),
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Center(
                   child: Container(
-                    width: 300,
-                    height: 121,
+                    width: 250,
+                    height: 90,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 230, 88, 12),
-                      borderRadius: BorderRadius.circular(10.0),
+                      color: const Color.fromARGB(255, 174, 104, 118),
+                      borderRadius: BorderRadius.circular(25.0),
                       border: Border.all(
-                        color: Color.fromARGB(255, 230, 88, 12),
+                        color: const Color.fromARGB(255, 174, 104, 118),
                         width: 2.0,
                       ),
                     ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Data Warga",
-                      style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
+                    alignment: Alignment.centerLeft,
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Text(
+                        "Arsip Laporan",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.left,
                       ),
                     ),
                   ),
                 ),
               ),
-               SizedBox(
-                height: 20,
+              const SizedBox(
+                height: 15,
               ),
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Center(
                   child: Container(
-                    width: 300,
-                    height: 121,
+                    width: 250,
+                    height: 90,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 174, 104, 118),
-                      borderRadius: BorderRadius.circular(10.0),
+                      color: const Color.fromARGB(255, 142, 142, 142),
+                      borderRadius: BorderRadius.circular(25.0),
                       border: Border.all(
-                        color: Color.fromARGB(255, 174, 104, 118),
+                        color: const Color.fromARGB(255, 142, 142, 142),
                         width: 2.0,
                       ),
                     ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Arsip Laporan",
-                      style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-               SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Center(
-                  child: Container(
-                    width: 300,
-                    height: 121,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 142, 142, 142),
-                      borderRadius: BorderRadius.circular(10.0),
-                      border: Border.all(
-                        color: Color.fromARGB(255, 142, 142, 142),
-                        width: 2.0,
-                      ),
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Data User",
-                      style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
+                    alignment: Alignment.centerLeft,
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Text(
+                        "Data User",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.left,
                       ),
                     ),
                   ),
