@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Siskamling',
       theme: ThemeData(),
-      initialRoute: '/arsip_laporan',
+      initialRoute: '/login',
       routes: {
         '/splashscreen': (context) => const SplashScreen (),
         '/login': (context) => const Login (),
