@@ -66,13 +66,29 @@ class Pencurian extends StatelessWidget {
                   child: GestureDetector(
                     onTap: () {
                       // Tampilkan sweet alert ketika pengguna menekan rumah
-                      FlutterNativeSplash.show(
-                        title: "Are you sure?",
-                        subtitle: "Do you want to report this incident?",
-                        backgroundColor: Colors.white,
-                        textColor: Colors.black,
-                        icon: Icons.warning,
-                        iconColor: Colors.orange,
+                     showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text("Are you sure?"),
+                          content: Text("Do you want to report this incident?"),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(); // Close the dialog
+                              },
+                              child: Text("Cancel"),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                // Add logic to report the incident
+                                Navigator.of(context).pop(); // Close the dialog
+                              },
+                              child: Text("Report"),
+                            ),
+                          ],
+                        );
+                      },
                       );
                     },
                   child: Container(
