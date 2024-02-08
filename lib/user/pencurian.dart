@@ -102,6 +102,7 @@ class Pencurian extends StatelessWidget {
                   ),
                 ),
               ),
+              ),
               const SizedBox(
                 height: 3,
               ),
