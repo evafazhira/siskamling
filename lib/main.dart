@@ -4,10 +4,22 @@ import 'package:siskamling/admin/arsip_laporan.dart';
 import 'package:siskamling/admin/login.dart';
 import 'package:siskamling/splashscreen.dart';
 import 'package:siskamling/admin/dashboard.dart';
+import 'package:siskamling/user/kebakaran.dart';
+import 'package:siskamling/user/lapor.dart';
+import 'package:siskamling/user/login_user.dart';
+import 'package:siskamling/user/pencurian.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
+  await Supabase.initialize(
+    url: 'https://olxmcwmfqylffckdvbmk.supabase.co',
+    anonKey: 
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9seG1jd21mcXlsZmZja2R2Ym1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDcyNzE3MjMsImV4cCI6MjAyMjg0NzcyM30.pjpUqC8daMRTOKUF7m28ZzJWrU9eYm-zHieayoDvnnY',
+  );
   runApp(const MyApp());
 }
+
+final supabase = Supabase.instance.client;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,13 +31,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Siskamling',
       theme: ThemeData(),
-      initialRoute: '/login',
+      initialRoute: '/lapor',
       routes: {
         '/splashscreen': (context) => const SplashScreen (),
         '/login': (context) => const Login (),
         '/dashboard':(context) => const Dashboard(),
         '/data_warga':(context) => const DataWarga(),
         '/arsip_laporan':(context) => const ArsipLaporan(),
+        '/login_user':(context) => const LoginUser(),
+        '/lapor':(context) => const Lapor(),
+        '/pencurian':(context) => const Pencurian(),
+        '/kebakaran':(context) => const Kebakaran(),
       },
     );
   }
