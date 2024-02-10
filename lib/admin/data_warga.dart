@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'dashboard.dart';
 
 class DataWarga extends StatelessWidget {
@@ -12,7 +13,7 @@ class DataWarga extends StatelessWidget {
           padding:
               const EdgeInsets.only(left: 30.0), // Adjust the padding as needed
           child: IconButton(
-            icon: Icon(Icons.arrow_back, size: 35.0),
+            icon: const Icon(Icons.arrow_back, size: 35.0),
             onPressed: () {
               // Add your back button onPressed logic here
               Navigator.pop(context); // Example to navigate back
@@ -62,62 +63,34 @@ class DataWarga extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(12.0),
-                child: Center(
-                  child: Container(
-                    width: 320,
-                    height: 75,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 211, 211, 211),
-                      borderRadius: BorderRadius.circular(17.0),
-                      border: Border.all(
+                child: GestureDetector(
+                  onTap: () {
+                    _showModal(context, "Rumah No.1");
+                  },
+                  child: Center(
+                    child: Container(
+                      width: 320,
+                      height: 75,
+                      decoration: BoxDecoration(
                         color: Color.fromARGB(255, 211, 211, 211),
-                        width: 2.0,
-                      ),
-                    ),
-                    alignment: Alignment.center,
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Text(
-                        "Rumah No.1",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold, // Make the font bold
-                          color: Color.fromARGB(255, 15, 0, 76),
+                        borderRadius: BorderRadius.circular(17.0),
+                        border: Border.all(
+                          color: Color.fromARGB(255, 211, 211, 211),
+                          width: 2.0,
                         ),
-                        textAlign: TextAlign.center,
                       ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Center(
-                  child: Container(
-                    width: 320,
-                    height: 75,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 211, 211, 211),
-                      borderRadius: BorderRadius.circular(17.0),
-                      border: Border.all(
-                        color: Color.fromARGB(255, 211, 211, 211),
-                        width: 2.0,
-                      ),
-                    ),
-                    alignment: Alignment.center,
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Text(
-                        "Rumah No.2",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold, // Make the font bold
-                          color: Color.fromARGB(255, 15, 0, 76),
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        child: Text(
+                          "Rumah No.1",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 15, 0, 76),
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
@@ -260,4 +233,72 @@ class DataWarga extends StatelessWidget {
       ),
     );
   }
+}
+void _showModal(BuildContext context, String RumahNo1) {
+  // Simpan teks $RumahNo1 di atas modal
+  Text teksRumahNo1 = Text(
+    "$RumahNo1",
+    style: GoogleFonts.kronaOne(   
+      fontSize: 25,
+      fontWeight: FontWeight.bold,
+      color: Color.fromARGB(255, 15, 0, 76),
+    ),
+     textAlign: TextAlign.center,
+  );
+
+  showModalBottomSheet(
+    context: context,
+    builder: (BuildContext context) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+           SizedBox(
+            height: 50,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: teksRumahNo1,
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          Center(
+            child: SizedBox(
+              width: 320,
+              height: 200,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 255, 130, 13),
+                  borderRadius: BorderRadius.circular(17.0),
+                  border: Border.all(
+                    color: Color.fromARGB(255, 255, 130, 13),
+                    width: 2.0,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "NIK     : 320414372990002\n"
+                        "Nama    : Jisung\n"
+                        "Alamat  : Jl.Otista No.39\n",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 15, 0, 76),
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      );
+    },
+  );
 }

@@ -21,7 +21,7 @@ class ArsipLaporan extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 30.0),
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.person,
                 size: 35.0,
               ),
@@ -134,7 +134,7 @@ class ArsipLaporan extends StatelessWidget {
                         width: 2.0,
                       ),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
