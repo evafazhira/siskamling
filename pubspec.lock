@@ -73,6 +73,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+<<<<<<< HEAD
+=======
   convert:
     dependency: transitive
     description:
@@ -81,6 +83,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.1"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7
   crypto:
     dependency: transitive
     description:
@@ -89,6 +92,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.3"
+<<<<<<< HEAD
+=======
   csslib:
     dependency: transitive
     description:
@@ -97,6 +102,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -121,6 +127,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+<<<<<<< HEAD
+=======
   file:
     dependency: transitive
     description:
@@ -129,6 +137,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.0"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7
   flutter:
     dependency: "direct main"
     description: flutter
@@ -155,6 +164,16 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
+  google_fonts:
+    dependency: "direct main"
+    description:
+      name: google_fonts
+      sha256: f0b8d115a13ecf827013ec9fc883390ccc0e87a96ed5347a3114cac177ef18e8
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.0"
+=======
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -208,6 +227,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.15.4"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7
   http:
     dependency: transitive
     description:
@@ -224,6 +244,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+<<<<<<< HEAD
+=======
   image:
     dependency: transitive
     description:
@@ -248,6 +270,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.1"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7
   lints:
     dependency: transitive
     description:
@@ -344,6 +367,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
+<<<<<<< HEAD
+=======
   petitparser:
     dependency: transitive
     description:
@@ -352,6 +377,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.2"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7
   platform:
     dependency: transitive
     description:
@@ -368,6 +394,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+<<<<<<< HEAD
+=======
   pointycastle:
     dependency: transitive
     description:
@@ -464,6 +492,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.2"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7
   sky_engine:
     dependency: transitive
     description: flutter
@@ -549,6 +578,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.2"
+<<<<<<< HEAD
+=======
   universal_io:
     dependency: transitive
     description:
@@ -621,6 +652,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.1"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7
   vector_math:
     dependency: transitive
     description:
@@ -637,6 +669,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.0"
+<<<<<<< HEAD
+=======
   web_socket_channel:
     dependency: transitive
     description:
@@ -645,6 +679,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7
   win32:
     dependency: transitive
     description:
@@ -661,6 +696,11 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+<<<<<<< HEAD
+sdks:
+  dart: ">=3.2.4 <4.0.0"
+  flutter: ">=3.10.0"
+=======
   xml:
     dependency: transitive
     description:
@@ -688,3 +728,4 @@ packages:
 sdks:
   dart: ">=3.2.4 <4.0.0"
   flutter: ">=3.16.0"
+>>>>>>> 78ee25e729a4c16396237960eeab4b3d438d5ca7

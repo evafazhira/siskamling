@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:siskamling/admin/arsip_laporan.dart';
 import 'package:siskamling/admin/data_warga.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key});
@@ -8,7 +9,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
           Padding(
@@ -25,58 +26,57 @@ class Dashboard extends StatelessWidget {
           ),
         ],
       ),
-
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-             const SizedBox(
-             height: 125,
+              const SizedBox(
+                height: 130,
               ),
               GestureDetector(
-                  onTap: () {
-                    // Navigate to the next page or perform the desired action
-                    // Example using Navigator to push a new page:
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DataWarga()),
-                    );
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                onTap: () {
+                  // Navigate to the next page or perform the desired action
+                  // Example using Navigator to push a new page:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DataWarga()),
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Center(
                     child: Container(
-                      width: 250,
-                      height: 90,
+                      width: 350,
+                      height: 150,
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 251, 129, 16),
+                        color: Color.fromARGB(255, 255, 130, 13),
                         borderRadius: BorderRadius.circular(25.0),
                         border: Border.all(
-                          color: const Color.fromARGB(255, 251, 129, 16),
+                          color: Color.fromARGB(255, 255, 130, 13),
                           width: 2.0,
                         ),
                       ),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 16.0),
+                            padding: const EdgeInsets.only(left: 16.0),
                             child: Text(
                               "Data Warga",
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.white,
+                              style: GoogleFonts.kronaOne(
+                                fontSize: 25,
+                                color: Color.fromARGB(255, 11, 0, 71),
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.only(right: 16.0),
+                          const Padding(
+                            padding: EdgeInsets.only(right: 12.0),
                             child: Image(
-                              image: AssetImage('assets/images/maling.jpeg'),
-                              width: 40,
-                              height: 40,
-                              fit: BoxFit.contain,
+                              image: AssetImage('assets/images/datawarga.png'), // Ganti dengan path gambar yang sesuai
+                              width: 80,
+                              height: 80,
                             ),
                           ),
                         ],
@@ -84,11 +84,11 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                 ),
-
-              const SizedBox(
-                height: 15,
               ),
-               GestureDetector(
+              const SizedBox(
+                height: 35,
+              ),
+              GestureDetector(
                 onTap: () {
                   // Navigate to the next page or perform the desired action
                   // Example using Navigator to push a new page:
@@ -101,60 +101,91 @@ class Dashboard extends StatelessWidget {
                   padding: const EdgeInsets.all(12.0),
                   child: Center(
                     child: Container(
-                      width: 250,
-                      height: 90,
+                      width: 350,
+                      height: 150,
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 174, 104, 118),
+                        color: Color.fromARGB(255, 211, 127, 144),
                         borderRadius: BorderRadius.circular(25.0),
                         border: Border.all(
-                          color: const Color.fromARGB(255, 174, 104, 118),
+                          color:  Color.fromARGB(255, 211, 127, 144),
                           width: 2.0,
                         ),
                       ),
-                      alignment: Alignment.centerLeft,
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        child: Text(
-                          "Arsip Laporan",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16.0),
+                            child: Text(
+                              "Arsip Laporan",
+                              style: GoogleFonts.kronaOne(
+                                fontSize: 25,
+                                color: Color.fromARGB(255, 11, 0, 71),
+                              ),
+                            ),
                           ),
-                          textAlign: TextAlign.left,
-                        ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 6.0),
+                            child: Image(
+                              image: AssetImage('assets/images/arsip.png'), // Ganti dengan path gambar yang sesuai
+                              width: 70,
+                              height: 70,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
                 ),
               ),
-
               const SizedBox(
-                height: 15,
+                height: 35,
               ),
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Center(
-                  child: Container(
-                    width: 250,
-                    height: 90,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 142, 142, 142),
-                      borderRadius: BorderRadius.circular(25.0),
-                      border: Border.all(
-                        color: const Color.fromARGB(255, 142, 142, 142),
-                        width: 2.0,
-                      ),
-                    ),
-                    alignment: Alignment.centerLeft,
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Text(
-                        "Data User",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
+              GestureDetector(
+                onTap: () {
+                  // Navigate to the next page or perform the desired action
+                  // Example using Navigator to push a new page:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DataWarga()),
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Center(
+                    child: Container(
+                      width: 350,
+                      height: 150,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(25.0),
+                        border: Border.all(
+                          color: Color.fromARGB(255, 124, 124, 124),
+                          width: 2.0,
                         ),
-                        textAlign: TextAlign.left,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16.0),
+                            child: Text(
+                              "Data Warga",
+                              style: GoogleFonts.kronaOne(
+                                fontSize: 25,
+                                color: Color.fromARGB(255, 11, 0, 71),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 12.0),
+                            child: Image(
+                              image: AssetImage('assets/images/datauser.png'), // Ganti dengan path gambar yang sesuai
+                              width: 60,
+                              height: 60,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),

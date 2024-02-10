@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:siskamling/admin/data_warga.dart';
 import 'package:siskamling/admin/arsip_laporan.dart';
+import 'package:siskamling/admin/form_tambah_warga.dart';
 import 'package:siskamling/admin/login.dart';
 import 'package:siskamling/splashscreen.dart';
 import 'package:siskamling/admin/dashboard.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const Login (),
         '/dashboard':(context) => const Dashboard(),
         '/data_warga':(context) => const DataWarga(),
+        '/form_tambah_warga':(context) => TambahWarga(),
         '/arsip_laporan':(context) => const ArsipLaporan(),
         '/login_user':(context) => const LoginUser(),
         '/lapor':(context) => const Lapor(),
