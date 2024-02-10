@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Siskamling',
       theme: ThemeData(),
-      initialRoute: '/lapor',
+      initialRoute: '/login',
       routes: {
         '/splashscreen': (context) => const SplashScreen (),
         '/login': (context) => const Login (),
