@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:siskamling/admin/dashboard.dart';
+import 'package:siskamling/user/login_user.dart';
 
 class Register extends StatelessWidget {
   const Register({Key? key});
@@ -136,7 +136,7 @@ class Register extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Dashboard()),
+                    MaterialPageRoute(builder: (context) => LoginUser()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
