@@ -20,6 +20,12 @@ void main() async {
   runApp(const MyApp());
 }
 
+class Supabase {
+  static var instance;
+
+  static initialize({required String url, required String anonKey}) {}
+}
+
 final supabase = Supabase.instance.client;
 
 class MyApp extends StatelessWidget {
