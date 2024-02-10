@@ -75,8 +75,8 @@ class Dashboard extends StatelessWidget {
                             padding: EdgeInsets.only(right: 12.0),
                             child: Image(
                               image: AssetImage('assets/images/datawarga.png'), // Ganti dengan path gambar yang sesuai
-                              width: 60,
-                              height: 60,
+                              width: 80,
+                              height: 80,
                             ),
                           ),
                         ],
