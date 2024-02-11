@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter 
 
-  supabase_flutter: ^0.3.3
+  supabase_flutter: ^1.1.0
   flutter_native_splash: ^2.0.0
 
 

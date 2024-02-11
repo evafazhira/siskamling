@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:siskamling/admin/data_warga.dart';
-import 'package:siskamling/admin/arsip_laporan.dart';
-import 'package:siskamling/admin/form_tambah_warga.dart';
-import 'package:siskamling/admin/login.dart';
+import 'package:siskamling/screens/admin/data_warga.dart';
+import 'package:siskamling/screens/admin/arsip_laporan.dart';
+import 'package:siskamling/screens/admin/form_tambah_warga.dart';
+import 'package:siskamling/screens/admin/login_admin.dart';
 import 'package:siskamling/splashscreen.dart';
-import 'package:siskamling/admin/dashboard.dart';
-import 'package:siskamling/user/kebakaran.dart';
-import 'package:siskamling/user/lapor.dart';
-import 'package:siskamling/user/login_user.dart';
-import 'package:siskamling/user/pencurian.dart';
+import 'package:siskamling/screens/admin/dashboard.dart';
+import 'package:siskamling/screens/user/kebakaran.dart';
+import 'package:siskamling/screens/user/lapor.dart';
+import 'package:siskamling/screens/user/login.dart';
+import 'package:siskamling/screens/user/pencurian.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() async {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(
     url: 'https://olxmcwmfqylffckdvbmk.supabase.co',
     anonKey: 
@@ -19,14 +20,6 @@ void main() async {
   );
   runApp(const MyApp());
 }
-
-class Supabase {
-  static var instance;
-
-  static initialize({required String url, required String anonKey}) {}
-}
-
-final supabase = Supabase.instance.client;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -41,12 +34,12 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/splashscreen': (context) => const SplashScreen (),
-        '/login': (context) => const Login (),
+        '/login': (context) => const Login(),
         '/dashboard':(context) => const Dashboard(),
         '/data_warga':(context) => const DataWarga(),
         '/form_tambah_warga':(context) => TambahWarga(),
         '/arsip_laporan':(context) => const ArsipLaporan(),
-        '/login_user':(context) => const LoginUser(),
+        '/login_admin':(context) => const LoginAdmin(),
         '/lapor':(context) => const Lapor(),
         '/pencurian':(context) => const Pencurian(),
         '/kebakaran':(context) => const Kebakaran(),
@@ -55,3 +48,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class MyWidget extends StatefulWidget {
+  const MyWidget({super.key});
+
+  @override
+  State<MyWidget> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<MyWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      
+    );
+  }
+}
