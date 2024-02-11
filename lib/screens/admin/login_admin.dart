@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:siskamling/screens//admin/dashboard.dart';
+import 'package:siskamling/screens/admin/dashboard.dart';
 
 class LoginAdmin extends StatelessWidget {
   const LoginAdmin({Key? key});

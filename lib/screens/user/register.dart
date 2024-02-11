@@ -1,60 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:siskamling/utils/utils.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:siskamling/screens/user/login.dart';
 
-class Register extends StatefulWidget {
-  const Register({super.key});
-
-  @override
-  State<Register> createState() => _RegisterState();
-}
-
-class _RegisterState extends State<Register> {
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  final _formKey = GlobalKey<FormState>();
-  bool _isLoading = false;
-
-  Future<void> _signUp({
-    required final email,
-    required final password,
-  }) async {
-    setState(() {
-      _isLoading = true;
-    });
-
-    try {
-      await client.auth.signUp(
-        email: email,
-        password: password,
-      );
-      if (mounted){
-        Navigator.popAndPushNamed(context, '/login');
-        context.showSnackBar('Konfirmasi Akumnu');
-      }
-    } on AuthException catch (error) {
-      context.showSnackBar(error.message);
-    }
-    setState((){
-      _isLoading = false;;
-    });
-  }
-
-  @override
-  void dispose(){
-    _emailController.dispose();
-    _passwordController.dispose();
-    super.dispose();
-  }
+class Register extends StatelessWidget {
+  const Register({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(30),
-        child: Form(
-          key: _formKey,
-          child: ListView(
+        child: ListView(
           children: [
             const Padding(
               padding: EdgeInsets.all(12.0),
@@ -94,14 +49,7 @@ class _RegisterState extends State<Register> {
                       color: const Color.fromRGBO(255, 255, 255, 1),
                       border: Border.all(color: Colors.black45, width: 1.0),
                     ),
-                    child: TextFormField(
-                      validator :(value) {
-                        if (value == null || value.isEmpty){
-                          return 'Tolong Masukkan Email Anda';
-                        }
-                        return null;
-                      },
-                      controller: _emailController,
+                    child: TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Masukkan Email',
@@ -112,7 +60,6 @@ class _RegisterState extends State<Register> {
                           color: Colors.grey,
                         ),
                       ),
-                      keyboardType: TextInputType.emailAddress,
                     ),
                   ),
                 ),
@@ -162,14 +109,7 @@ class _RegisterState extends State<Register> {
                       color: const Color.fromRGBO(255, 255, 255, 1),
                       border: Border.all(color: Colors.black45, width: 1.0),
                     ),
-                    child: TextFormField(
-                      validator :(value) {
-                        if (value == null || value.isEmpty){
-                          return 'Tolong Masukkan Password Anda';
-                        }
-                        return null;
-                      },
-                      controller: _passwordController,
+                    child: TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Masukkan Password',
@@ -184,36 +124,20 @@ class _RegisterState extends State<Register> {
                           color: Colors.grey,
                         ),                         
                       ),
-                      obscureText: true,
                     ),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            _isLoading 
-            ? const SizedBox(
-              child: CircularProgressIndicator(),
-            )
-            : Padding(
+            SizedBox(height: 35),
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: ElevatedButton(
                 onPressed: () {
-                  final isValid = _formKey.currentState?.validate();
-
-                  if (isValid != true){
-                    return;
-                  }
-
-                  final res = _signUp(
-                    email: _emailController.text,
-                    password: _passwordController.text,
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
                   );
-
-                  res.then((value) {
-                    _emailController.clear();
-                    _passwordController.clear();
-                  });
                 },
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 40),
@@ -241,7 +165,6 @@ class _RegisterState extends State<Register> {
               ),
             ),
           ],
-          ),
         ),
       ),
     );
