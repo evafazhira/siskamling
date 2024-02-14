@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:siskamling/screens/admin/data_warga.dart';
-import 'package:siskamling/screens/admin/arsip_laporan.dart';
-import 'package:siskamling/screens/admin/form_tambah_warga.dart';
-import 'package:siskamling/screens/admin/login_admin.dart';
-import 'package:siskamling/splashscreen.dart';
-import 'package:siskamling/screens/admin/dashboard.dart';
-import 'package:siskamling/screens/user/kebakaran.dart';
-import 'package:siskamling/screens/user/lapor.dart';
-import 'package:siskamling/screens/user/login.dart';
-import 'package:siskamling/screens/user/pencurian.dart';
+import 'package:get/get.dart';
+import 'package:flutter/services.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:siskamling/common/bindings/app_bindings.dart';
+import 'package:siskamling/routes/app_routes.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(
-    url: 'https://olxmcwmfqylffckdvbmk.supabase.co',
+    url: 'https://bvxypsiekzyepdvfohfz.supabase.co',
     anonKey: 
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9seG1jd21mcXlsZmZja2R2Ym1rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDcyNzE3MjMsImV4cCI6MjAyMjg0NzcyM30.pjpUqC8daMRTOKUF7m28ZzJWrU9eYm-zHieayoDvnnY',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2eHlwc2lla3p5ZXBkdmZvaGZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc2NTQ3NDUsImV4cCI6MjAyMzIzMDc0NX0.b6gGgM-wWBYgZ9v69wzF_I4a891BsAqYK_OXzuB1cT8',
   );
+  await GetStorage.init();
+
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(const MyApp());
 }
 
@@ -27,39 +28,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Siskamling',
-      theme: ThemeData(),
-      initialRoute: '/login',
-      routes: {
-        '/splashscreen': (context) => const SplashScreen (),
-        '/login': (context) => const Login(),
-        '/dashboard':(context) => const Dashboard(),
-        '/data_warga':(context) => const DataWarga(),
-        '/form_tambah_warga':(context) => TambahWarga(),
-        '/arsip_laporan':(context) => const ArsipLaporan(),
-        '/login_admin':(context) => const LoginAdmin(),
-        '/lapor':(context) => const Lapor(),
-        '/pencurian':(context) => const Pencurian(),
-        '/kebakaran':(context) => const Kebakaran(),
-      },
-    );
-  }
-}
-
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
-
-  @override
-  State<MyWidget> createState() => _MyWidgetState();
-}
-
-class _MyWidgetState extends State<MyWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      
+      getPages: AppRoutes.routes,
+      initialRoute: AppRoutes.initial,
+      initialBinding: AppBinding(),
+      defaultTransition: Transition.rightToLeft,
+      transitionDuration: Get.defaultTransitionDuration,
     );
   }
 }

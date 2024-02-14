@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:siskamling/screens/user/kebakaran.dart';
-import 'package:siskamling/screens/user/pencurian.dart';
+import 'package:siskamling/screens/user/kebakaran/kebakaran.dart';
+import 'package:siskamling/screens/user/pencurian/pencurian.dart';
 
 class Lapor extends StatelessWidget {
   const Lapor({super.key});

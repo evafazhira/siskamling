@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:siskamling/screens/admin/form_tambah_warga.dart';
-import 'dashboard.dart';
+import 'package:siskamling/screens/admin/form_detail_rumah.dart';
 
 class DataWarga extends StatelessWidget {
   const DataWarga({Key? key});
@@ -159,15 +159,51 @@ class DataWarga extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(6.0),
               child: teksRumahNo1,
             ),
             SizedBox(
-              height: 50,
+              height: 30,
             ),
+            GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => TambahDetailWarga()),
+            );
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Center(
+                child: Container(
+                  width: 100,
+                  height: 30,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 98, 55, 255),
+                    borderRadius: BorderRadius.circular(8.0),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 98, 55, 255),
+                      width: 2.0,
+                    ),
+                  ),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+             ),
+             ),
             Center(
               child: SizedBox(
                 width: 320,
@@ -187,9 +223,10 @@ class DataWarga extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "NIK     : 320414372990002\n"
-                          "Nama    : Jisung\n"
-                          "Alamat  : Jl.Otista No.39\n",
+                          "NIK       : 320414372990002\n"
+                          "Email     : Jisung1234@gmail.com\n"
+                          "Nama      : Jisung\n"
+                          "Password  : jisung1234\n",
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
