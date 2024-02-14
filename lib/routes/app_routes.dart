@@ -2,14 +2,13 @@ import 'package:get/get.dart';
 import 'package:siskamling/screens/splash_screen/splashscreen.dart';
 import 'package:siskamling/screens/splash_screen/bindings/splash_binding.dart';
 import 'package:siskamling/screens/user/auth/bindings/auth_bindings.dart';
-import 'package:siskamling/screens/user/auth/login.dart';
+import 'package:siskamling/screens/user/auth/login_user.dart';
 import 'package:siskamling/screens/user/auth/register.dart';
 import 'package:siskamling/screens/user/lapor/lapor.dart';
 import 'package:siskamling/screens/user/kebakaran/kebakaran.dart';
 import 'package:siskamling/screens/user/pencurian/pencurian.dart';
 import 'package:siskamling/screens/admin/dashboard.dart';
 import 'package:siskamling/screens/admin/data_warga.dart';
-import 'package:siskamling/screens/admin/form_detail_rumah.dart';
 
 class AppRoutes {
   static const initial = "/splash_screen";
@@ -22,8 +21,8 @@ class AppRoutes {
       transition: Transition.noTransition,
     ),
     GetPage(
-      name: '/login',
-      page: () => Login(),
+      name: '/login_user',
+      page: () => LoginUser(),
       binding: AuthBinding(),
     ),
     

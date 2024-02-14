@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:siskamling/screens/user/kebakaran/kebakaran.dart';
 import 'package:siskamling/screens/user/pencurian/pencurian.dart';
+import 'package:siskamling/screens/user/profile/user_profile.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Lapor extends StatelessWidget {
   const Lapor({super.key});
@@ -19,7 +21,10 @@ class Lapor extends StatelessWidget {
                 size: 35.0,
               ),
               onPressed: () {
-                // Add your profile icon onPressed logic here
+                Navigator.push(
+                 context,
+                 MaterialPageRoute(builder: (context) => UserProfile()),
+              );
               },
             ),
           ),
@@ -33,7 +38,7 @@ class Lapor extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
              const SizedBox(
-             height: 125,
+             height: 100,
               ),
               GestureDetector(
                   onTap: () {
@@ -57,21 +62,21 @@ class Lapor extends StatelessWidget {
                           width: 2.0,
                         ),
                       ),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 16.0),
+                            padding: EdgeInsets.only(left: 20.0),
                             child: Text(
                               "Pencurian",
-                              style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.white,
+                              style: GoogleFonts.josefinSans(
+                                fontSize: 35,
+                                color: Color.fromARGB(255, 255, 255, 255),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(right: 2.0),
+                            padding: EdgeInsets.only(right: 0.0),
                             child: Image(
                               image: AssetImage('assets/images/maling.jpeg'),
                               width: 200,
@@ -111,21 +116,21 @@ class Lapor extends StatelessWidget {
                           width: 2.0,
                         ),
                       ),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 16.0),
+                            padding: EdgeInsets.only(left: 20.0),
                             child: Text(
                               "Kebakaran",
-                              style: TextStyle(
-                                fontSize: 30,
+                                style: GoogleFonts.josefinSans(
+                                fontSize: 35,
                                 color: Colors.white,
                               ),
-                            ),
+                              ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(right: 16.0),
+                            padding: EdgeInsets.only(right: 0.0),
                             child: Image(
                               image: AssetImage('assets/images/api.jpeg'),
                               width: 200,

@@ -43,11 +43,11 @@ class DataWarga extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(12.0),
                 child: Text(
                   "Data Warga",
-                  style: TextStyle(
+                  style: GoogleFonts.josefinSans(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 15, 0, 76),
@@ -127,7 +127,7 @@ class DataWarga extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 houseNumber,
-                style: TextStyle(
+                style: GoogleFonts.kronaOne(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 15, 0, 76),
@@ -166,7 +166,7 @@ class DataWarga extends StatelessWidget {
               child: teksRumahNo1,
             ),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             GestureDetector(
             onTap: () {
@@ -220,19 +220,18 @@ class DataWarga extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(32.0),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "NIK       : 320414372990002\n"
-                          "Email     : Jisung1234@gmail.com\n"
-                          "Nama      : Jisung\n"
-                          "Password  : jisung1234\n",
-                          style: TextStyle(
-                            fontSize: 20,
+                          "NIK        : 320414372990002\n"
+                          "Email      : Jisung1234@gmail.com\n"
+                          "Nama       : Jisung\n"
+                          "Password   : jisung1234\n",
+                          style: GoogleFonts.josefinSans(
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(255, 15, 0, 76),
                           ),
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.justify,
                         ),
                       ],
                     ),

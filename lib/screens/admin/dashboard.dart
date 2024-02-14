@@ -138,59 +138,6 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 35,
-              ),
-              GestureDetector(
-                onTap: () {
-                  // Navigate to the next page or perform the desired action
-                  // Example using Navigator to push a new page:
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => DataWarga()),
-                  );
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Center(
-                    child: Container(
-                      width: 350,
-                      height: 150,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 124, 124, 124),
-                        borderRadius: BorderRadius.circular(25.0),
-                        border: Border.all(
-                          color: Color.fromARGB(255, 124, 124, 124),
-                          width: 2.0,
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Text(
-                              "Data Warga",
-                              style: GoogleFonts.kronaOne(
-                                fontSize: 25,
-                                color: Color.fromARGB(255, 11, 0, 71),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 12.0),
-                            child: Image(
-                              image: AssetImage('assets/images/datauser.png'), // Ganti dengan path gambar yang sesuai
-                              width: 60,
-                              height: 60,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
             ],
           ),
         ),

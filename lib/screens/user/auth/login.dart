@@ -14,7 +14,7 @@ class Login extends GetView<AuthController> {
           children: [
             SizedBox(height: 30),
             Image.asset(
-              'assets/images/logo.jpeg',
+              'assets/images/logo.png',
               width: 300, // Set the desired width
               height: 250, // Set the desired height
               fit: BoxFit.contain,

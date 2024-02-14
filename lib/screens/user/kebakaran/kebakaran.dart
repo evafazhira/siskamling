@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Kebakaran extends StatelessWidget {
   const Kebakaran({super.key});
@@ -44,13 +45,13 @@ class Kebakaran extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(12.0),
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
                     "Data Rumah",
-                    style: TextStyle(
+                    style: GoogleFonts.josefinSans(
                       fontSize: 30,
                       fontWeight: FontWeight.bold, // Make the font bold
                       color: Color.fromARGB(255, 15, 0, 76),
@@ -62,6 +63,34 @@ class Kebakaran extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Center(
+                  child: GestureDetector(
+                    onTap: () {
+                      // Tampilkan sweet alert ketika pengguna menekan rumah
+                     showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: const Text("Kamu Yakin?"),
+                          content: const Text("Kamu ingin melaporkan kejadian ini?"),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(); // Close the dialog
+                              },
+                              child: const Text("Tidak"),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                // Add logic to report the incident
+                                Navigator.of(context).pop(); // Close the dialog
+                              },
+                              child: const Text("Laporkan"),
+                            ),
+                          ],
+                        );
+                      },
+                      );
+                    },
                   child: Container(
                     width: 320,
                     height: 75,
@@ -74,11 +103,11 @@ class Kebakaran extends StatelessWidget {
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.1",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),
@@ -88,6 +117,7 @@ class Kebakaran extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
               ),
               const SizedBox(
                 height: 3,
@@ -107,11 +137,11 @@ class Kebakaran extends StatelessWidget {
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.2",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),
@@ -140,11 +170,11 @@ class Kebakaran extends StatelessWidget {
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child:  Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.3",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),
@@ -173,11 +203,11 @@ class Kebakaran extends StatelessWidget {
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.4",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),
@@ -206,11 +236,11 @@ class Kebakaran extends StatelessWidget {
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.5",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),

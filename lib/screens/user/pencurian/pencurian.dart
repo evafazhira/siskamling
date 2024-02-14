@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:siskamling/screens/user/pencurian/notifications_widget.dart';
 
-class Pencurian extends StatelessWidget {
-  const Pencurian({super.key});
+class Pencurian extends StatefulWidget {
+
+  @override
+  State<Pencurian> createState() => _PencurianState();
+}
+
+class _PencurianState extends State<Pencurian> {
+  
+  @override
+  void initState() {
+    super.initState();
+    NotificationWidget.init();
+  }
 
    @override
   Widget build(BuildContext context) {
@@ -45,13 +58,13 @@ class Pencurian extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(12.0),
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
                     "Data Rumah",
-                    style: TextStyle(
+                    style: GoogleFonts.josefinSans(
                       fontSize: 30,
                       fontWeight: FontWeight.bold, // Make the font bold
                       color: Color.fromARGB(255, 15, 0, 76),
@@ -70,21 +83,24 @@ class Pencurian extends StatelessWidget {
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          title: Text("Are you sure?"),
-                          content: Text("Do you want to report this incident?"),
+                          title: const Text("Kamu Yakin?"),
+                          content: const Text("Kamu ingin melaporkan kejadian ini?"),
                           actions: [
                             TextButton(
                               onPressed: () {
                                 Navigator.of(context).pop(); // Close the dialog
                               },
-                              child: Text("Cancel"),
+                              child: const Text("Tidak"),
                             ),
                             TextButton(
                               onPressed: () {
-                                // Add logic to report the incident
-                                Navigator.of(context).pop(); // Close the dialog
+                                NotificationWidget.showNotification(
+                                  title: "Pencurian Terjadi!",
+                                  body: "terjadi di rumah no 1",
+                                  
+                                );
                               },
-                              child: Text("Report"),
+                              child: const Text("Laporkan"),
                             ),
                           ],
                         );
@@ -103,11 +119,11 @@ class Pencurian extends StatelessWidget {
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.1",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),
@@ -129,19 +145,19 @@ class Pencurian extends StatelessWidget {
                     width: 320,
                     height: 75,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 211, 211, 211),
+                      color: const Color.fromARGB(255, 211, 211, 211),
                       borderRadius: BorderRadius.circular(17.0),
                       border: Border.all(
-                        color: Color.fromARGB(255, 211, 211, 211),
+                        color: const Color.fromARGB(255, 211, 211, 211),
                         width: 2.0,
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.2",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),
@@ -170,11 +186,11 @@ class Pencurian extends StatelessWidget {
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.3",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),
@@ -203,11 +219,11 @@ class Pencurian extends StatelessWidget {
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.4",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),
@@ -236,11 +252,11 @@ class Pencurian extends StatelessWidget {
                       ),
                     ),
                     alignment: Alignment.center,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: Text(
                         "Rumah No.5",
-                        style: TextStyle(
+                        style: GoogleFonts.kronaOne(
                           fontSize: 20,
                           fontWeight: FontWeight.bold, // Make the font bold
                           color: Color.fromARGB(255, 15, 0, 76),
