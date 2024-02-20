@@ -28,7 +28,7 @@ class AppRoutes {
     
     GetPage(name: '/register', page: () => Register(), binding: AuthBinding()),
     GetPage(name: '/lapor', page: () => const Lapor()),
-    GetPage(name: '/pencurian', page: () => const Pencurian()),
+    GetPage(name: '/pencurian', page: () => Pencurian()),
     GetPage(name: '/kebakaran', page: () => const Kebakaran()),
     GetPage(name: '/dashboard', page: () => const Dashboard()),
     GetPage(name: '/data_warga', page: () => const DataWarga()),

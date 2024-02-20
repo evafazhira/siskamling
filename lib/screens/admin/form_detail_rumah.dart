@@ -72,7 +72,7 @@ class TambahDetailWarga extends StatelessWidget {
                       hintStyle: TextStyle(fontSize: 14, color: Colors.grey),
                       contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 16),
                       prefixIcon: Icon(
-                        Icons.location_on_outlined,
+                        Icons.add_card_outlined,
                         color: Colors.grey,
                       ),
                     ),
@@ -97,7 +97,7 @@ class TambahDetailWarga extends StatelessWidget {
                       hintStyle: TextStyle(fontSize: 14, color: Colors.grey),
                       contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 16),
                       prefixIcon: Icon(
-                        Icons.location_on_outlined,
+                        Icons.email,
                         color: Colors.grey,
                       ),
                     ),
@@ -122,7 +122,7 @@ class TambahDetailWarga extends StatelessWidget {
                       hintStyle: TextStyle(fontSize: 14, color: Colors.grey),
                       contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 16),
                       prefixIcon: Icon(
-                        Icons.location_on_outlined,
+                        Icons.person,
                         color: Colors.grey,
                       ),
                     ),
@@ -147,7 +147,7 @@ class TambahDetailWarga extends StatelessWidget {
                       hintStyle: TextStyle(fontSize: 14, color: Colors.grey),
                       contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 16),
                       prefixIcon: Icon(
-                        Icons.location_on_outlined,
+                        Icons.key_outlined,
                         color: Colors.grey,
                       ),
                     ),

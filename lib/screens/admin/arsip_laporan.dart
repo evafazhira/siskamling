@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dashboard.dart';
 
 class ArsipLaporan extends StatelessWidget {
   const ArsipLaporan({Key? key});
@@ -149,7 +148,7 @@ class ArsipLaporan extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.only(right: 16.0),
                           child: Text(
-                            "Data Warga",
+                            "Pencurian di Rumah No.1",
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,

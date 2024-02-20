@@ -159,14 +159,14 @@ class DataWarga extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(
-              height: 30,
+              height: 15,
             ),
             Padding(
               padding: const EdgeInsets.all(6.0),
               child: teksRumahNo1,
             ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
             GestureDetector(
             onTap: () {
