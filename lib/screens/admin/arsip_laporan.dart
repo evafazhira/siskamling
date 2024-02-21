@@ -123,7 +123,7 @@ class ArsipLaporan extends StatelessWidget {
                 padding: const EdgeInsets.all(12.0),
                 child: Center(
                   child: Container(
-                    width: 250,
+                    width: 300,
                     height: 180,
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 216, 216, 216),
@@ -139,14 +139,14 @@ class ArsipLaporan extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.only(left: 16.0),
                           child: Image(
-                            image: AssetImage('assets/images/maling.jpeg'),
-                            width: 40,
-                            height: 40,
+                            image: AssetImage('assets/images/jam.png'),
+                            width: 60,
+                            height: 60,
                             fit: BoxFit.contain,
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: 16.0),
+                          padding: EdgeInsets.only(right: 14.0),
                           child: Text(
                             "Pencurian di Rumah No.1",
                             style: TextStyle(
