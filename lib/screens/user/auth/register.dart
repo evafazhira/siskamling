@@ -4,6 +4,7 @@ import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:siskamling/screens/user/auth/controllers/auth_controllers.dart';
 
 class Register extends GetView<AuthController> {
+  
 
   @override
   Widget build(BuildContext context) {

@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart'; 
 
 class UserProfile extends StatelessWidget {
-  const UserProfile({super.key});
- 
+  const UserProfile({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(30),
         child: ListView(
           children: [
             ClipOval(
-             child: Image.asset(
-              'assets/images/user.png',
-              width: 300, // Set the desired width
-              height: 250, // Set the desired height
-              fit: BoxFit.contain,
+              child: Image.asset(
+                'assets/images/user.png',
+                width: 200,
+                height: 200,
+                fit: BoxFit.contain,
+              ),
             ),
-            ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -40,14 +42,13 @@ class UserProfile extends StatelessWidget {
                       border: InputBorder.none,
                       labelText: '3210010000004',
                       labelStyle: TextStyle(fontSize: 14),
-                      contentPadding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 16),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 16),
                     ),
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 20),
             const Text(
               'Email',
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
@@ -65,13 +66,11 @@ class UserProfile extends StatelessWidget {
                   border: InputBorder.none,
                   labelText: 'Js@gmail.com',
                   labelStyle: TextStyle(fontSize: 14),
-                  contentPadding:
-                      EdgeInsets.symmetric(horizontal: 16, vertical: 17),
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 17),
                 ),
               ),
-              
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 20),
             const Text(
               'Nama',
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
@@ -89,14 +88,13 @@ class UserProfile extends StatelessWidget {
                   border: InputBorder.none,
                   labelText: 'Js',
                   labelStyle: TextStyle(fontSize: 14),
-                  contentPadding:
-                      EdgeInsets.symmetric(horizontal: 16, vertical: 17),
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 17),
                 ),
               ),
             ),
-              ],
-            ),
-            ),
+          ],
+        ),
+      ),
     );
   }
 }

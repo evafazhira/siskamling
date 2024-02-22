@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:siskamling/screens/admin/arsip_laporan.dart';
-import 'package:siskamling/screens/admin/data_warga.dart';
+import 'package:siskamling/screens/admin/data_rumah/data_warga.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Dashboard extends StatelessWidget {

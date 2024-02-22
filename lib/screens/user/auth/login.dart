@@ -4,11 +4,13 @@ import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:siskamling/screens/user/auth/controllers/auth_controllers.dart';
 
 class Login extends GetView<AuthController> {
+final formKey = GlobalKey<FormState>();
  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
+      key: formKey,
         padding: const EdgeInsets.all(30),
         child: ListView(
           children: [
@@ -120,28 +122,9 @@ class Login extends GetView<AuthController> {
                       },
                       child: const Text(
                         "MASUK",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(color: Color.fromARGB(255, 73, 50, 188), fontSize: 16),
                       ),
                     )),
-                const SizedBox(height: 50,),
-                Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    "Tidak punya akun ? ",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Get.offNamed('/register');
-                    },
-                    child: const Text(
-                      "Daftar",
-                      style: TextStyle(fontSize: 20, color: Colors.blue),
-                    ),
-                  )
-                ],
-              )
               ],
             ),
             ),

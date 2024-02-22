@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:siskamling/screens/admin/form_tambah_warga.dart';
+import 'package:get/get.dart';
+import 'package:siskamling/screens/admin/data_rumah/form_tambah_warga.dart';
 import 'package:siskamling/screens/admin/form_detail_rumah.dart';
 
 class DataWarga extends StatelessWidget {
@@ -96,6 +97,21 @@ class DataWarga extends StatelessWidget {
                   ),
                 ),
               ),
+               const SizedBox(height: 40,),
+                Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Get.offNamed('/register');
+                    },
+                    child: Text(
+                      "Daftarkan akun untuk warga disini",
+                      style: GoogleFonts.josefinSans(fontSize: 20, color: Colors.blue),
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         ),

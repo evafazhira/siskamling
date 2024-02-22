@@ -3,6 +3,6 @@ import 'package:get/get.dart';
 import 'package:siskamling/common/controllers/app_controller.dart';
 
 
-class LaporController extends GetxController {
+class ProfileController extends GetxController {
   AppController app = Get.find<AppController>();
 }

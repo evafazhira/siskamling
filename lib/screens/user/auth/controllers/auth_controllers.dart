@@ -52,8 +52,7 @@ class AuthController extends GetxController {
         var result = await UserDatabase().insert(userModel: userModel);
         UserModel userModelNew = UserModel.fromMap(result[0]);
         await _box.write("user", userModelNew.toMap());
-
-        app.isAuthenticated.value = true;
+        Get.offNamed('/data_warga');
       } else {
         print("Daftar Gagal");
       }
@@ -81,7 +80,7 @@ class AuthController extends GetxController {
         print("User tidak ditemukan");
       }
     } catch (e) {
-      print("Login Gagal");
+      print("Login Gagal: $e");
     }
   }
 

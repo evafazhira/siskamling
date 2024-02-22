@@ -3,9 +3,11 @@ import 'package:siskamling/screens/user/kebakaran/kebakaran.dart';
 import 'package:siskamling/screens/user/pencurian/pencurian.dart';
 import 'package:siskamling/screens/user/profile/user_profile.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:get/get.dart';
+import 'package:siskamling/screens/user/lapor/controllers/lapor_controllers.dart';
 
-class Lapor extends StatelessWidget {
-  const Lapor({super.key});
+class Lapor extends GetView<LaporController> {
+  
 
   @override
   Widget build(BuildContext context) {
