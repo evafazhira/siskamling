@@ -137,28 +137,47 @@ class ArsipLaporan extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(left: 16.0),
+                          padding: EdgeInsets.only(left: 30.0),
                           child: Image(
                             image: AssetImage('assets/images/jam.png'),
-                            width: 60,
-                            height: 60,
+                            width: 80,
+                            height: 80,
                             fit: BoxFit.contain,
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(right: 14.0),
-                          child: Text(
-                            "Pencurian di Rumah No.1",
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
+                        Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Waktu pelaporan",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(height: 8),
+                                Text(
+                                  "01.15", // Display time
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(height: 4),
+                                Text(
+                                  "10/02/24", // Display date
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    ],
                   ),
                 ),
+              ),
               ),
             ],
           ),
