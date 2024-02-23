@@ -16,7 +16,7 @@ class SplashController extends GetxController {
   String isAuthenticated() => app.isAuthenticated.isTrue
       ? app.user().role == "user"
           ? '/lapor'
-          : '/lapor'
+          : '/dashboard'
       : '/login';
 
  void startTimer() => Future.delayed(const Duration(seconds: 2), () {
